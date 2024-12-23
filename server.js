@@ -1,7 +1,8 @@
 // Here is where we import modules
 // We begin by loading Express
 require('dotenv').config();
-require('./config/database')
+require('./config/database');
+
 const express = require('express');
 const morgan = require('morgan');
 
@@ -20,6 +21,10 @@ app.use(morgan('dev'));
 
 app.get("/", async (req, res) => {
     res.render("index.ejs");
+  });
+
+  app.get("/fruits/new", (req, res) => {
+    res.render("fruits/new.ejs");
   });
   
 
