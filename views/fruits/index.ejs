@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <img
+    class="fruit-pic1"
+    src="https://cdn-icons-png.flaticon.com/128/5312/5312448.png"
+    alt="happy fruit salad bowl"
+  />
     <title>Fruits Index</title>
 </head>
 <body>
     <h1>All Fruits</h1> 
-    <a href="/fruits">Browse Fruits</a>
     <a href="/fruits/new">Add New Fruit</a>
     <ul>
-        <% fruits.forEach((fruit)=>{ %>
-            <li> <%= fruit.name %></li>
-        <% }) %>
-    </ul>  
+        <% fruits.forEach(fruit => { %>
+            <li>
+            <a href="/fruits/<%= fruit._id %>"> <%= fruit.name %> </a>  
+            </li>
+        <% }); %>
+      </ul>    
+      
 </body>
+<footer>Icons by <a href="https://www.flaticon.com/authors/freepik">Freekpik</a></footer>
 </html>

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+body {
+    background: #fff8ed;
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+  }
+  
+  h1 {
+    color: #769642;
+    font-size: 3.6em;
+  }
+  
+  footer {
+    font-size: 0.7em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .fruit-pic1 {
+    height: 30%;
+  }
+  
