@@ -6,6 +6,10 @@ require('./config/database');
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require("method-override");
+const path = require("path");
+
+
+
 
 //Models
 const Fruit = require("./models/fruit.js");
@@ -17,6 +21,8 @@ const app = express();
 app.use(methodOverride("_method"));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, "public")));
 
 
 // ROUTES
